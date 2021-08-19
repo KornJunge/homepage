@@ -1,0 +1,66 @@
+/* CSS Document */
+
+body {
+    background-color: black;
+}
+
+video
+{
+    width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+/* poc menu item */
+
+#menu_item_01{
+    background:blue;
+    position:absolute;
+    cursor:pointer;
+    transform: translate(-50%, -50%);
+}
+
+@media screen and (max-aspect-ratio: 1920/1080) {
+  #menu_item_01 {
+    top:calc(50% + calc(0vw * 0.5625));
+    left:calc(50% + calc(35vw * 0.5625));
+    height:calc(9vw * 0.5625);
+    width:calc(16vw * 0.5625);
+  }
+}
+@media screen and (min-aspect-ratio: 1920/1080) {
+  #menu_item_01 {
+    top:calc(50% + 0vh);
+    left:calc(50% + 35vh);
+    height:9vh;
+    width:16vh;
+  }
+}
+
+/* video container */
+
+video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+.video-container > video {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+@media screen and (max-aspect-ratio: 1920/1080) {
+  .video-container > video {
+    height: 100%;
+  }
+}
+@media screen and (min-aspect-ratio: 1920/1080) {
+  .video-container > video {
+    width: 100%;
+  }
+}
